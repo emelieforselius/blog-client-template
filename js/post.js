@@ -15,6 +15,7 @@ async function fetchBlogPost() {
             </p>
             <p>tags: ${post.tags.join(', ')}</p>
             <p>${post.content}</p> 
+            <a href="index.html">back</a>
             `;
 
         document.getElementById('post-details').innerHTML = postDetails;
