@@ -1,9 +1,10 @@
 async function fetchBlogPost() {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search); 
     const postId = urlParams.get('id');
+    console.log(postId)
 
     try {
-        const response = await fetch(`https://blog-api-assignment.up.railway.app/posts/65738ce731b9d5002a636a6c`)
+        const response = await fetch(`https://blog-api-assignment.up.railway.app/posts/${postId}`)
         const post = await response.json()
 
         postDate = new Date(post.date)
@@ -13,7 +14,7 @@ async function fetchBlogPost() {
             <p> 
             ${post.author} | ${new Date(post.date).toLocaleString()}
             </p>
-            <p>tags: ${post.tags.join(', ')}</p>
+            <p>tags: ${post.tags ? post.tags.join(', ') : ''}</p>
             <p>${post.content}</p> 
             <a href="index.html">back</a>
             `;
@@ -27,7 +28,6 @@ async function fetchBlogPost() {
 }
 
 fetchBlogPost();
-
 
 
  

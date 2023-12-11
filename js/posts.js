@@ -6,16 +6,15 @@ async function fetchAllPosts() {
 
         let postListHTML = "";
         for (let post of posts) {
-            let postDate = new Date(post.date) 
 
             postListHTML += `
             <h2>${post.title}</h2>
             <p>
             ${post.author} | ${new Date(post.date).toLocaleString()}
             </p>
-            <p>tags: ${post.tags.join(', ')}</p>
-            <p>${post.content.slice(0, 100)}</p>
-            <a href="post.html?id=${post.id}">...read more</a>
+            <p>tags: ${post.tags ? post.tags.join(', ') : ''}</p>
+            <p>${post.content ? post.content.slice(0, 100) : ''}</p>
+            <a href="post.html?id=${post._id}">...read more</a>
             `;
         }
 
