@@ -12,11 +12,11 @@ async function fetchBlogPost() {
             let postDetails = `
             <h2>${post.title}</h2>
             <p> 
-            ${post.author} | ${new Date(post.date).toLocaleString()}
+            <em>${post.author}</em> | <em>${new Date(post.date).toLocaleString()}</em>
             </p>
-            <p>tags: ${post.tags ? post.tags.join(', ') : ''}</p>
+            <p><strong>tags:</strong> ${post.tags ? post.tags.join(', ') : ''}</p>
             <p>${post.content}</p> 
-            <a href="index.html">back</a>
+            <a href="index.html">Back</a>
             `;
 
         document.getElementById('post-details').innerHTML = postDetails;
