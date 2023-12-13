@@ -1,0 +1,41 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db; 
+}
+
+h1 {
+    padding: 50px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#blog-posts {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.blog-post {
+    margin-bottom: 70px;
+}
+
+#post-details {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.admin-link {
+    text-align: right;
+    margin-right: 200px;
+}
